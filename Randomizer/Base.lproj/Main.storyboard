@@ -29,6 +29,9 @@
                                 <state key="normal" title="Get Result">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="getRandomNumberButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Ds-D5-NW2"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="5rf-sG-lsY">
                                 <rect key="frame" x="16" y="156" width="382" height="60"/>
@@ -74,12 +77,91 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Random Number" id="tdv-zd-yea">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="6Cy-oL-DYE"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="6Cy-oL-DYE">
+                            <connections>
+                                <segue destination="xSO-P6-5NQ" kind="presentation" id="EN5-gv-3VL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="getRandomNumberButton" destination="qVW-2B-v2e" id="uQr-Z8-0p2"/>
+                        <outlet property="maximumVlaueLable" destination="2dx-MD-7fs" id="wFd-iF-NRz"/>
+                        <outlet property="minimumValueLable" destination="qdt-OH-Rfs" id="yZ2-pf-Rut"/>
+                        <outlet property="randomValueLable" destination="zjr-Aq-jHc" id="5tE-gG-gh9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="64.955357142857139"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="FYH-08-frm">
+            <objects>
+                <viewController id="xSO-P6-5NQ" customClass="SettingsViewController" customModule="Randomizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ipa-ac-His">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="7bt-YD-5dK">
+                                <rect key="frame" x="60" y="104" width="294" height="92"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum value" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rp5-Jz-9ec">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Maximum value" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cnj-il-Dps">
+                                        <rect key="frame" x="0.0" y="58" width="294" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xLk-1x-QgQ">
+                                <rect key="frame" x="161.5" y="373" width="91" height="96"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMK-AT-CD7">
+                                        <rect key="frame" x="0.0" y="0.0" width="91" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <segue destination="ZcK-gl-6fc" kind="unwind" unwindAction="unwindFor:" id="mLS-Lc-U5C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcl-5G-3sU">
+                                        <rect key="frame" x="0.0" y="48" width="91" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtunPressed" destination="xSO-P6-5NQ" eventType="touchUpInside" id="RB3-8h-19q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mG1-Bl-I8A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7bt-YD-5dK" firstAttribute="top" secondItem="mG1-Bl-I8A" secondAttribute="top" constant="60" id="6Ud-br-BfL"/>
+                            <constraint firstItem="xLk-1x-QgQ" firstAttribute="centerX" secondItem="ipa-ac-His" secondAttribute="centerX" id="9Fe-vO-zAM"/>
+                            <constraint firstItem="7bt-YD-5dK" firstAttribute="leading" secondItem="mG1-Bl-I8A" secondAttribute="leading" constant="60" id="Puv-eC-rCB"/>
+                            <constraint firstItem="mG1-Bl-I8A" firstAttribute="trailing" secondItem="7bt-YD-5dK" secondAttribute="trailing" constant="60" id="Tf7-iX-4a3"/>
+                            <constraint firstItem="xLk-1x-QgQ" firstAttribute="centerY" secondItem="ipa-ac-His" secondAttribute="centerY" id="Xs3-bu-eSY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="maximumValueTextField" destination="cnj-il-Dps" id="lJa-Mq-VH2"/>
+                        <outlet property="minimumValueTextField" destination="rp5-Jz-9ec" id="3H7-pm-kMY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ij2-uL-7j6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ZcK-gl-6fc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1682.608695652174" y="64.955357142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Ol-bJ-451">
@@ -103,6 +185,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

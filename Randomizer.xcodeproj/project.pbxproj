@@ -13,6 +13,7 @@
 		C61905F6288D3C2400FB7753 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61905F4288D3C2400FB7753 /* Main.storyboard */; };
 		C61905F8288D3C2600FB7753 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61905F7288D3C2600FB7753 /* Assets.xcassets */; };
 		C61905FB288D3C2600FB7753 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61905F9288D3C2600FB7753 /* LaunchScreen.storyboard */; };
+		C6190609288D8FFE00FB7753 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6190608288D8FFD00FB7753 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C61905F7288D3C2600FB7753 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C61905FA288D3C2600FB7753 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C61905FC288D3C2600FB7753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6190608288D8FFD00FB7753 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				C61905EE288D3C2400FB7753 /* AppDelegate.swift */,
 				C61905F0288D3C2400FB7753 /* SceneDelegate.swift */,
 				C61905F2288D3C2400FB7753 /* MainViewController.swift */,
+				C6190608288D8FFD00FB7753 /* SettingsViewController.swift */,
 				C61905F4288D3C2400FB7753 /* Main.storyboard */,
 				C61905F7288D3C2600FB7753 /* Assets.xcassets */,
 				C61905F9288D3C2600FB7753 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				C61905F3288D3C2400FB7753 /* MainViewController.swift in Sources */,
 				C61905EF288D3C2400FB7753 /* AppDelegate.swift in Sources */,
 				C61905F1288D3C2400FB7753 /* SceneDelegate.swift in Sources */,
+				C6190609288D8FFE00FB7753 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
