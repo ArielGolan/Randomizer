@@ -58,16 +58,48 @@
 		C61905ED288D3C2400FB7753 /* Randomizer */ = {
 			isa = PBXGroup;
 			children = (
-				C61905EE288D3C2400FB7753 /* AppDelegate.swift */,
-				C61905F0288D3C2400FB7753 /* SceneDelegate.swift */,
-				C61905F2288D3C2400FB7753 /* MainViewController.swift */,
-				C6190608288D8FFD00FB7753 /* SettingsViewController.swift */,
-				C61905F4288D3C2400FB7753 /* Main.storyboard */,
-				C61905F7288D3C2600FB7753 /* Assets.xcassets */,
-				C61905F9288D3C2600FB7753 /* LaunchScreen.storyboard */,
-				C61905FC288D3C2600FB7753 /* Info.plist */,
+				C619062A288E905D00FB7753 /* App */,
+				C619062B288E907C00FB7753 /* ViewControllers */,
+				C619062C288E909B00FB7753 /* Storyboards */,
+				C619062D288E90F600FB7753 /* Resurces */,
 			);
 			path = Randomizer;
+			sourceTree = "<group>";
+		};
+		C619062A288E905D00FB7753 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C61905EE288D3C2400FB7753 /* AppDelegate.swift */,
+				C61905F0288D3C2400FB7753 /* SceneDelegate.swift */,
+				C61905FC288D3C2600FB7753 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C619062B288E907C00FB7753 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C61905F9288D3C2600FB7753 /* LaunchScreen.storyboard */,
+				C61905F2288D3C2400FB7753 /* MainViewController.swift */,
+				C6190608288D8FFD00FB7753 /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C619062C288E909B00FB7753 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C61905F4288D3C2400FB7753 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C619062D288E90F600FB7753 /* Resurces */ = {
+			isa = PBXGroup;
+			children = (
+				C61905F7288D3C2600FB7753 /* Assets.xcassets */,
+			);
+			path = Resurces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
